@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter_app_01/app_colors.dart';
-import 'package:sample_flutter_app_01/login_page.dart';
+import 'package:sample_flutter_app_01/pages/home_page.dart';
+import 'package:sample_flutter_app_01/pages/main_page.dart';
+import 'package:sample_flutter_app_01/pages/test_page.dart';
+import 'package:sample_flutter_app_01/styles/app_colors.dart';
+import 'package:sample_flutter_app_01/pages/login_page.dart';
 
 // Everything in Flutter is a Widget.
 
@@ -111,8 +114,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           fontFamily: "Urbanist",
-          scaffoldBackgroundColor: AppColors.backgroundColor),
-      home: LoginPage(),
+          scaffoldBackgroundColor: AppColors.backgroundColor,
+          // brightness: Brightness.light,
+          ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/test': (context) =>TestPage(),
+        '/home': (context) => HomePage(),
+        '/main': (context) => MainPage(),
+      },
     );
 
     throw UnimplementedError();

@@ -94,7 +94,9 @@ class LoginPage extends StatelessWidget {
               width: 200,
               child: ElevatedButton(
                   onPressed: () {
-                    print("Log in button is clicked.");
+                    // Navigator.of(context).pushNamed('/home');      // Doesn't remove the back stacked pages and backward movement is allowed.
+                    Navigator.of(context).pushReplacementNamed('/main'); 
+                    // Navigator.of(context).pushReplacementNamed('/home');  // Doesn't allow the backward movement of the pages and back staged pages are removed.
                   },
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
