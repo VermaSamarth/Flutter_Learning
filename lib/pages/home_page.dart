@@ -11,7 +11,13 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: Toolbar(
         title: "AutoHub",
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.location_on))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed('/nearby');
+              },
+              icon: Icon(Icons.location_on))
+        ],
       ),
       // AppBar(
       //   backgroundColor: Colors.amber,

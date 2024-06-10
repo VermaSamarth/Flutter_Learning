@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sample_flutter_app_01/pages/home_page.dart';
 import 'package:sample_flutter_app_01/pages/main_page.dart';
+import 'package:sample_flutter_app_01/pages/nearby_page.dart';
 import 'package:sample_flutter_app_01/pages/test_page.dart';
 import 'package:sample_flutter_app_01/styles/app_colors.dart';
 import 'package:sample_flutter_app_01/pages/login_page.dart';
@@ -123,6 +124,7 @@ class MyApp extends StatelessWidget {
         '/test': (context) =>TestPage(),
         '/home': (context) => HomePage(),
         '/main': (context) => MainPage(),
+        '/nearby': (context) => NearbyPage(),
       },
     );
 
